@@ -29,11 +29,13 @@
           </p>
          <form>
           <div class="input-container">
-            <input type="email" placeholder="Email Address" />
-            <button class="send-button">
-              <img src="images/icon-arrow.svg" alt="Arrow Icon" />
+            <input type="text" id="email" placeholder="Email Address" />
+            <button class="send-button" id="submit-btn">
+                <img src="images/icon-arrow.svg" alt="Arrow Icon" />
             </button>
-          </div>
+            <img src="images/icon-error.svg" alt="Error Icon" class="error-icon" id="error-icon" />
+        </div>
+        <p class="error-message" id="error-message"></p>
          </form>
       </div>
   
@@ -46,4 +48,5 @@
   </section>
 </main>
 </body>
+<script src="/app.js"></script>
 </html>

@@ -142,6 +142,22 @@ input::placeholder {
 .hero-image.mobile {
     display: none;
 }
+.error-icon {
+    position: absolute;
+    top: 50%;
+    right: 80px; /* Ajusta según el tamaño del botón */
+    transform: translateY(-50%);
+    display: none; /* Oculto por defecto */
+    width: 24px;
+    height: 24px;
+}
+
+.error-message {
+    color: var(--soft-red);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: none; /* Oculto por defecto */
+}
 
 @media (max-width: 768px) {
     .container {
