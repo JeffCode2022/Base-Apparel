@@ -44,7 +44,7 @@ body {
     width: 160px;
 }
 
-.wrapper {
+.main-content {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -55,35 +55,39 @@ body {
     margin-top: 5%;
 }
 
-h1 {
+.hero-title {
     font-size: 4rem;
     font-weight: 600;
-    letter-spacing: 0.5rem; /* Aumentado de 0.35rem */
+    letter-spacing: 0.5rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
 
-h1 .intro {
+.hero-title .intro-text {
     color: var(--desaturated-red);
     font-weight: 300;
     font-size: 4rem;
-    letter-spacing: 0.55rem; /* Aumentado de 0.35rem */
+    letter-spacing: 0.55rem;
     display: block;
     margin-bottom: 0.5rem;
 }
 
-h1 .main {
+.hero-title .main-text {
     display: block;
     color: var(--dark-grayish-red);
-    letter-spacing: 0.45rem; /* Añadido para mejor control */
+    letter-spacing: 0.45rem;
 }
 
-p {
+.hero-description {
     color: var(--desaturated-red);
     font-size: 1rem;
     line-height: 1.8;
     max-width: 85%;
     margin: 1.5rem 0;
+}
+
+.subscription-form {
+    width: 100%;
 }
 
 .input-container {
@@ -92,7 +96,7 @@ p {
     margin-top: 1rem;
 }
 
-input {
+.email-input {
     width: 100%;
     padding: 1.2rem 2rem;
     border: 1px solid var(--desaturated-red);
@@ -103,7 +107,7 @@ input {
     transition: all 0.3s ease;
 }
 
-input::placeholder {
+.email-input::placeholder {
     color: var(--desaturated-red);
     opacity: 0.5;
 }
@@ -120,7 +124,7 @@ input::placeholder {
     background: var(--gradient-soft-red);
     box-shadow: 0 10px 20px rgba(255, 98, 98, 0.3);
     cursor: pointer;
-    transition: all 0.3sease;
+    transition: all 0.3s ease;
 }
 
 .send-button:hover {
@@ -128,7 +132,7 @@ input::placeholder {
     box-shadow: 0 12px 25px rgba(255, 98, 98, 0.4);
 }
 
-.image-container {
+.hero-image-container {
     flex: 1.2;
     min-height: 100vh;
 }
@@ -142,12 +146,13 @@ input::placeholder {
 .hero-image.mobile {
     display: none;
 }
+
 .error-icon {
     position: absolute;
     top: 50%;
-    right: 80px; /* Ajusta según el tamaño del botón */
+    right: 80px;
     transform: translateY(-50%);
-    display: none; /* Oculto por defecto */
+    display: none;
     width: 24px;
     height: 24px;
 }
@@ -156,7 +161,29 @@ input::placeholder {
     color: var(--soft-red);
     font-size: 0.875rem;
     margin-top: 0.5rem;
-    display: none; /* Oculto por defecto */
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal p {
+    color: var(--dark-grayish-red);
+    font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
@@ -176,7 +203,7 @@ input::placeholder {
         width: 120px;
     }
 
-    .wrapper {
+    .main-content {
         padding: 2rem;
         margin: 0;
         text-align: center;
@@ -184,16 +211,16 @@ input::placeholder {
         order: 2;
     }
 
-    h1 {
+    .hero-title {
         font-size: 2.5rem;
         letter-spacing: 0.2rem;
     }
 
-    h1 .intro {
+    .hero-title .intro-text {
         font-size: 2.5rem;
     }
 
-    p {
+    .hero-description {
         max-width: 100%;
         font-size: 0.9rem;
     }
@@ -202,7 +229,7 @@ input::placeholder {
         width: 100%;
     }
 
-    .image-container {
+    .hero-image-container {
         order: 1;
         width: 100%;
         min-height: auto;

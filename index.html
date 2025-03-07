@@ -10,7 +10,7 @@
 </head>
 <body>
 <main>
-  <section>
+  <section class="hero-section">
     <div class="container">
       <!-- Logotipo -->
       <div class="logo">
@@ -18,35 +18,42 @@
       </div>
   
       <!-- Contenido principal -->
-      <div class="wrapper">
-          <h1>
-              <span class="intro">WE'RE</span>
-              <span class="main">COMING<br>SOON</span>
+      <div class="main-content">
+          <h1 class="hero-title">
+              <span class="intro-text">WE'RE</span>
+              <span class="main-text">COMING<br>SOON</span>
           </h1>
-          <p>
+          <p class="hero-description">
               Hello fellow shoppers! We're currently building our new fashion store. 
               Add your email below to stay up-to-date with announcements and our launch deals.
           </p>
-         <form>
+         <form class="subscription-form">
           <div class="input-container">
-            <input type="text" id="email" placeholder="Email Address" />
+            <input type="text" id="email" placeholder="Email Address" class="email-input" />
             <button class="send-button" id="submit-btn">
                 <img src="images/icon-arrow.svg" alt="Arrow Icon" />
             </button>
             <img src="images/icon-error.svg" alt="Error Icon" class="error-icon" id="error-icon" />
-        </div>
-        <p class="error-message" id="error-message"></p>
+          </div>
+          <p class="error-message" id="error-message"></p>
          </form>
+      </div>
+
+      <!-- Modal de éxito -->
+      <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <p>¡Correo válido! Gracias por suscribirte.</p>
+        </div>
       </div>
   
       <!-- Contenedor de la imagen de fondo -->
-      <div class="image-container">
+      <div class="hero-image-container">
           <img class="hero-image desktop" src="images/hero-desktop.jpg" alt="Hero Image Desktop">
           <img class="hero-image mobile" src="images/hero-mobile.jpg" alt="Hero Image Mobile">
       </div>
-  </div>
+    </div>
   </section>
 </main>
-</body>
 <script src="/app.js"></script>
+</body>
 </html>
